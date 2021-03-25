@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="496.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddPart">
+   <children>
+      <Label layoutX="242.0" layoutY="8.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="368.0" layoutY="426.0" mnemonicParsing="false" onAction="#buttonClickSave" text="Save">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="152.0" layoutY="426.0" mnemonicParsing="false" onAction="#buttonClickCancel" text="Cancel">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="31.0" layoutY="54.0" prefHeight="362.0" prefWidth="538.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+         <children>
+            <RadioButton fx:id="toggleInHouse" layoutX="144.0" layoutY="23.0" mnemonicParsing="false" onAction="#userCheckedInHouse" selected="true" text="In-House">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="partSource" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="toggleOutsourced" layoutX="305.0" layoutY="23.0" mnemonicParsing="false" onAction="#userCheckedOutsourced" text="Outsourced" toggleGroup="$partSource">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="80.0" layoutY="75.0" text="ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="partID" disable="true" editable="false" layoutX="218.0" layoutY="70.0" prefHeight="31.0" prefWidth="186.0" text="&lt;Auto Generated&gt;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="80.0" layoutY="115.0" text="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="155.0" text="Inv">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="194.0" text="Price/Cost">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="234.0" text="Max">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="partIdentifierLabel" layoutX="80.0" layoutY="315.0" text="Machine ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="275.0" text="Min">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="partName" layoutX="218.0" layoutY="110.0" prefHeight="31.0" prefWidth="186.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="partInv" layoutX="218.0" layoutY="150.0" prefHeight="31.0" prefWidth="186.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="partCost" layoutX="218.0" layoutY="189.0" prefHeight="31.0" prefWidth="186.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="partMax" layoutX="218.0" layoutY="229.0" prefHeight="31.0" prefWidth="186.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="partMin" layoutX="218.0" layoutY="270.0" prefHeight="31.0" prefWidth="186.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="partIdentifier" layoutX="219.0" layoutY="310.0" prefHeight="31.0" prefWidth="186.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
